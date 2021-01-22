@@ -78,7 +78,7 @@ function Home() {
         </div>
       </header>
       <main>
-        {features && features.length > 0 && (
+        {/*features && features.length > 0 && (
           <section className={styles.features}>
             <div className="container">
               <div className="row">
@@ -88,7 +88,7 @@ function Home() {
               </div>
             </div>
           </section>
-        )}
+                )*/}
       </main>
     </Layout>
   );
