@@ -1,25 +1,25 @@
 module.exports = {
-  title: 'Olivétan',
-  tagline: 'La première Bible Francaise.',
+  title: 'La Bible d\'Olivétan',
+  tagline: 'La première Bible Française.',
   url: 'https://olivetan.fr',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'RilDev', // Usually your GitHub org/user name.
+  projectName: 'olivetan', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: 'Olivétan',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Olivétan Logo',
         src: 'img/logo.svg',
       },
       items: [
         {
-          to: 'docs/',
+          to: 'bible/',
           activeBasePath: 'docs',
-          label: 'Docs',
+          label: 'Bible',
           position: 'left',
         },
         {to: 'blog', label: 'Blog', position: 'left'},
@@ -86,6 +86,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: 'bible',
           // Please change this to your repo.
           editUrl:
             'https://github.com/facebook/docusaurus/edit/master/website/',
