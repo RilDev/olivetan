@@ -1,7 +1,7 @@
 module.exports = {
   title: 'La Bible d\'Olivétan',
   tagline: 'La première Bible Française.',
-  url: ' https://olivetan.fr',
+  url: 'https://olivetan.fr',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
