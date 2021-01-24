@@ -4,5 +4,5 @@ La première Bible Française. Traduit en 1535 par frère Olivétan. Cette Bible
 
 ## Todo
 
-- [ ] add css style `.markdown`: `text-align: justify;`
+- [x] add css style `.markdown`: `text-align: justify;`
 - [ ] add line-breaks in introduction
