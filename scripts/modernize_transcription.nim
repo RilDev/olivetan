@@ -1,4 +1,6 @@
 # install nim: sudo apt install nim
+# run: nim c -r modernize-transcript.nim arg1 arg2
+# compile release version: nim c -d:release modernize-transcript.nim
 # This script has for objective to automatically modernize the transcript of the Olivetan Bible.
 
 # Replace all old letters
