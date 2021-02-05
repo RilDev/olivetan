@@ -29,3 +29,4 @@
 
 # Log out all words and their frequency to ease the search of typos
 # The words with the smallest frequecy come on top of the list
+# Remove all non-letters non-spaces characters
