@@ -10,10 +10,19 @@ Todo:
 - [x] Write filename generating function
 - [x] Export function
 - [ ] Create Test Suit
+- [ ] Add assertEquals in the Error tests to make sure the error message displays correctly
 */
 
 export const generateFilename = (filename: string, stringToAppend: string): string => {
     /** Errors **/
+    /* filename or stringToAppend are empty strings */
+    if (filename === '' || stringToAppend === '') {
+        throw Error('Parameters must not be empty strings!');
+    }
+    /* filename only contains one period "." */
+    if (filename === '.') {
+        throw Error('filename must be of the format: filename.ext');
+    }
     /* filename has more than one period */
     if (filename.split('.').length !== 2) {
         throw Error('filename, the first parameter, must contain exactly 1 period "."!');
