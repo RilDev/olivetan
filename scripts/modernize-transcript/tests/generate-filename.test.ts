@@ -3,6 +3,7 @@ import {
   assertThrows,
 } from "https://deno.land/std/testing/asserts.ts";
 import { generateFilename } from "../generate-filename.ts";
+import { ALLOWED_FILENAME_CHARACTERS } from "../constants.ts";
 
 /** Errors **/
 Deno.test("filename or stringToAppend are empty strings", () => {
@@ -64,7 +65,7 @@ Deno.test("stringToAppend contains a period", () => {
   );
 });
 
-Deno.test("filename or stringToAppend contains illigal characters (not [^A-Za-z0-9\-_\.])", () => {
+Deno.test("filename or stringToAppend contains illigal characters (not in ALLOWED_FILENAME_CHARACTERS)", () => {
   const error1 = assertThrows(() =>
     generateFilename("test 2.txt", "modernizer")
   );
@@ -86,27 +87,27 @@ Deno.test("filename or stringToAppend contains illigal characters (not [^A-Za-z0
 
   assertEquals(
     error1.message,
-    "Spaces and special characters not allowed! Only characters in [A-Za-z0-9\-_\.] are allowed.",
+    `Spaces and special characters not allowed! Only characters in ${ALLOWED_FILENAME_CHARACTERS} are allowed.`,
   );
   assertEquals(
     error2.message,
-    "Spaces and special characters not allowed! Only characters in [A-Za-z0-9\-_\.] are allowed.",
+    `Spaces and special characters not allowed! Only characters in ${ALLOWED_FILENAME_CHARACTERS} are allowed.`,
   );
   assertEquals(
     error3.message,
-    "Spaces and special characters not allowed! Only characters in [A-Za-z0-9\-_\.] are allowed.",
+    `Spaces and special characters not allowed! Only characters in ${ALLOWED_FILENAME_CHARACTERS} are allowed.`,
   );
   assertEquals(
     error4.message,
-    "Spaces and special characters not allowed! Only characters in [A-Za-z0-9\-_\.] are allowed.",
+    `Spaces and special characters not allowed! Only characters in ${ALLOWED_FILENAME_CHARACTERS} are allowed.`,
   );
   assertEquals(
     error5.message,
-    "Spaces and special characters not allowed! Only characters in [A-Za-z0-9\-_\.] are allowed.",
+    `Spaces and special characters not allowed! Only characters in ${ALLOWED_FILENAME_CHARACTERS} are allowed.`,
   );
   assertEquals(
     error6.message,
-    "Spaces and special characters not allowed! Only characters in [A-Za-z0-9\-_\.] are allowed.",
+    `Spaces and special characters not allowed! Only characters in ${ALLOWED_FILENAME_CHARACTERS} are allowed.`,
   );
 });
 
@@ -124,6 +125,10 @@ Deno.test("Generate Filename from well formatted strings", () => {
   assertEquals(
     generateFilename("Test.txt", "modernized"),
     "Test-modernized.txt",
+  );
+  assertEquals(
+    generateFilename("path/to/file/test.txt", "modernized"),
+    "path/to/file/test-modernized.txt",
   );
   assertEquals(generateFilename("a.b", "c"), "a-c.b");
 });

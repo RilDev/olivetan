@@ -13,6 +13,8 @@ Todo:
 - [x] Add assertEquals in the Error tests to make sure the error message displays correctly
 */
 
+import { ALLOWED_FILENAME_CHARACTERS } from "./constants.ts";
+
 export const generateFilename = (
   filename: string,
   stringToAppend: string,
@@ -38,13 +40,13 @@ export const generateFilename = (
       'stringToAppend, the second parameter, must not contain any period "."!',
     );
   }
-  /* filename or stringToAppend contains illigal characters (not [^A-Za-z0-9\-_\.]) */
+  /* filename or stringToAppend contains illigal characters (not in ALLOWED_FILENAME_CHARACTERS) */
   if (
-    filename.match(/[^A-Za-z0-9\-_\.]/) ||
-    stringToAppend.match(/[^A-Za-z0-9\-_\.]/)
+    filename.match(ALLOWED_FILENAME_CHARACTERS) ||
+    stringToAppend.match(ALLOWED_FILENAME_CHARACTERS)
   ) {
     throw Error(
-      "Spaces and special characters not allowed! Only characters in [A-Za-z0-9\-_\.] are allowed.",
+      `Spaces and special characters not allowed! Only characters in ${ALLOWED_FILENAME_CHARACTERS} are allowed.`,
     );
   }
 
