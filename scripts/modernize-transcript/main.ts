@@ -3,7 +3,7 @@ Modernize Transcipt
 Goal: Take one ore several transcript texts from the Olivetan Bible to correct/modernize them to make them more readable
 Input: Text Files
 Output: For each file fed, it will generate a `filename-modernized` and a `filename-wfl` file. The first is the modernized version of the text, the other a word frequency list.
-Errors: If there are no files given, if a file is not a text file
+Errors: If there are no files given, if a file is not a text or markdown file
 Checks: /
 Run: deno run --allow-read --allow-write main.ts FILE_1 FILE_2
 Test: deno test scripts/
@@ -15,9 +15,11 @@ Todo:
 - [ ] Add a separate `word-frequency-list.ts` script to only generate a word frequency list
 */
 
-export const main = async (): Promise<void> => {
+import { generateFilename } from "./generate-filename.ts";
+
+export const main = async (filenames = Deno.args): Promise<void> => {
   /** Get All CLI Arguments **/
-  const filenames = Deno.args;
+  // In order to be able to test the input of the `main()` function, I instanciate `filenames = Deno.args` directly as a parameter.
 
   /** Errors **/
   /* No Files Given as Arguments */
@@ -25,7 +27,7 @@ export const main = async (): Promise<void> => {
     throw Error("No Files Given!");
   }
 
-  /* One of the files is not a text file (pdf, image...) */
+  /* One of the files is not a text or markdown file (pdf, image...) */
   for (const filename of filenames) {
     // get the filename extension
     const filenameExtension = filename.split(".")[1];
@@ -39,12 +41,9 @@ export const main = async (): Promise<void> => {
   for (const filename of filenames) {
     /** Initialize Variables **/
     // Name of the modernized file: [filename]-modernized.[file extension]
-    const modernizedFilename = `${filename.split(".")[0]}-modernized.${
-      filename.split(".")[1]
-    }`;
-    const wordFrequencyListFilename = `${filename.split(".")[0]}-wfl.${
-      filename.split(".")[1]
-    }`;
+    const modernizedFilename = generateFilename(filename, "modernized");
+    // Name of the word frequency list file: [filename]-wfl.[file extension]
+    const wordFrequencyListFilename = generateFilename(filename, "wfl");
 
     /** Open File **/
 
@@ -78,11 +77,12 @@ export const main = async (): Promise<void> => {
     /* Create Log File */
 
     /** Save and Close File **/
-
+    /* Modernized File */
     let file = await Deno.readTextFile(filename);
     file = file.replace(/\s/g, "?");
     console.log(file);
     await Deno.writeTextFile(modernizedFilename, file);
+    /* Word Frequency List */
   }
 };
 
