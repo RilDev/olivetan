@@ -6,7 +6,7 @@ import { generateFilename } from "../generate-filename.ts";
 import { ALLOWED_FILENAME_CHARACTERS } from "../constants.ts";
 
 /** Errors **/
-Deno.test("filename or stringToAppend are empty strings", () => {
+Deno.test("modernize-transcript/generateFilename: filename or stringToAppend are empty strings", () => {
   const error1 = assertThrows(() => generateFilename("", ""));
   const error2 = assertThrows(() => generateFilename("test.txt", ""));
   const error3 = assertThrows(() => generateFilename("", "modernized"));
@@ -16,13 +16,13 @@ Deno.test("filename or stringToAppend are empty strings", () => {
   assertEquals(error3.message, "Parameters must not be empty strings!");
 });
 
-Deno.test('filename only contains one period "."', () => {
+Deno.test('modernize-transcript/generateFilename: filename only contains one period "."', () => {
   const error1 = assertThrows(() => generateFilename(".", "modernized"));
 
   assertEquals(error1.message, "filename must be of the format: filename.ext");
 });
 
-Deno.test("filename has more than one period", () => {
+Deno.test("modernize-transcript/generateFilename: filename has more than one period", () => {
   const error1 = assertThrows(() =>
     generateFilename("test.test.txt", "modernized")
   );
@@ -40,7 +40,7 @@ Deno.test("filename has more than one period", () => {
   );
 });
 
-Deno.test("stringToAppend contains a period", () => {
+Deno.test("modernize-transcript/generateFilename: stringToAppend contains a period", () => {
   const error1 = assertThrows(() =>
     generateFilename("test.txt", "modernized.md")
   );
@@ -65,7 +65,7 @@ Deno.test("stringToAppend contains a period", () => {
   );
 });
 
-Deno.test("filename or stringToAppend contains illigal characters (not in ALLOWED_FILENAME_CHARACTERS)", () => {
+Deno.test("modernize-transcript/generateFilename: filename or stringToAppend contains illigal characters (not in ALLOWED_FILENAME_CHARACTERS)", () => {
   const error1 = assertThrows(() =>
     generateFilename("test 2.txt", "modernizer")
   );
@@ -114,7 +114,7 @@ Deno.test("filename or stringToAppend contains illigal characters (not in ALLOWE
 /** Checks **/
 
 /** General Tests **/
-Deno.test("Generate Filename from well formatted strings", () => {
+Deno.test("modernize-transcript/generateFilename: Generate Filename from well formatted strings", () => {
   assertEquals(
     generateFilename("test.txt", "modernized"),
     "test-modernized.txt",
