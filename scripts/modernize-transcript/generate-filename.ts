@@ -9,8 +9,8 @@ Todo:
 - [x] Check input
 - [x] Write filename generating function
 - [x] Export function
-- [ ] Create Test Suit
-- [ ] Add assertEquals in the Error tests to make sure the error message displays correctly
+- [x] Create Test Suit
+- [x] Add assertEquals in the Error tests to make sure the error message displays correctly
 */
 
 export const generateFilename = (filename: string, stringToAppend: string): string => {
