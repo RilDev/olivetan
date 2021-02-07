@@ -15,32 +15,37 @@ Todo:
 - [ ] Add a separate `word-frequency-list.ts` script to only generate a word frequency list
 */
 
-/** Get All CLI Arguments **/
-const filenames = Deno.args;
+export const main = async (): Promise<void> => {
+  /** Get All CLI Arguments **/
+  const filenames = Deno.args;
 
-/** Errors **/
-/* No Files Given as Arguments */
-if (filenames.length === 0) {
-    throw Error('No Files Given!');
-}
+  /** Errors **/
+  /* No Files Given as Arguments */
+  if (filenames.length === 0) {
+    throw Error("No Files Given!");
+  }
 
-/* One of the files is not a text file (pdf, image...) */
-for (const filename of filenames) {
+  /* One of the files is not a text file (pdf, image...) */
+  for (const filename of filenames) {
     // get the filename extension
-    const filenameExtension = filename.split('.')[1];
+    const filenameExtension = filename.split(".")[1];
 
-    if (filenameExtension !== 'txt' && filenameExtension !== 'md') {
-        throw Error('Only txt and md files are accepted!');
+    if (filenameExtension !== "txt" && filenameExtension !== "md") {
+      throw Error("Only txt and md files are accepted!");
     }
-}
+  }
 
-/** Loop Through All The Files **/
-for (const filename of filenames) {
+  /** Loop Through All The Files **/
+  for (const filename of filenames) {
     /** Initialize Variables **/
     // Name of the modernized file: [filename]-modernized.[file extension]
-    const modernizedFilename = `${filename.split('.')[0]}-modernized.${filename.split('.')[1]}`;
-    const wordFrequencyListFilename = `${filename.split('.')[0]}-wfl.${filename.split('.')[1]}`;
-    
+    const modernizedFilename = `${filename.split(".")[0]}-modernized.${
+      filename.split(".")[1]
+    }`;
+    const wordFrequencyListFilename = `${filename.split(".")[0]}-wfl.${
+      filename.split(".")[1]
+    }`;
+
     /** Open File **/
 
     /** Replace all old letters **/
@@ -51,7 +56,6 @@ for (const filename of filenames) {
     /* Replace "i" to "j" for the following list of words. ex: "iamais" -> "jamais" */
     /* Replace "u" to "v" for the following list of words. ex: "suyuant" -> "suyvant" */
     /* Replace "v" to "u" for the following list of words. ex: "vni" -> "uni" */
-
 
     /** Modernize punctuation **/
     /* ".": no space before, add space after */
@@ -75,9 +79,11 @@ for (const filename of filenames) {
 
     /** Save and Close File **/
 
-
     let file = await Deno.readTextFile(filename);
-    file = file.replace(/\s/g,'?')
-    console.log(file)
-    await Deno.writeTextFile(modernizedFilename, file)
-}
+    file = file.replace(/\s/g, "?");
+    console.log(file);
+    await Deno.writeTextFile(modernizedFilename, file);
+  }
+};
+
+main();
