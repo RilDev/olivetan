@@ -47,17 +47,32 @@ Deno.test("modernize-transcript/main: Tests That Should Not Produce Any Errors",
   ]);
 });
 
-/* Check If Files Have Been Created */
 Deno.test("modernize-transcript/main: Check If Files Have Been Created", async () => {
-const file1 = await exists(`${BASE_URL}/test-files/test-modernized.md`);
-const file2 = await exists(`${BASE_URL}/test-files/test-wfl.md`);
-const file3 = await exists(`${BASE_URL}/test-files/test-modernized.txt`);
-const file4 = await exists(`${BASE_URL}/test-files/test-wfl.txt`);
+  const file1 = await exists(`${BASE_URL}/test-files/test-modernized.md`);
+  const file2 = await exists(`${BASE_URL}/test-files/test-wfl.md`);
+  const file3 = await exists(`${BASE_URL}/test-files/test-modernized.txt`);
+  const file4 = await exists(`${BASE_URL}/test-files/test-wfl.txt`);
 
-assert(file1);
-assert(file2);
-assert(file3);
-assert(file4);
+  assert(file1);
+  assert(file2);
+  assert(file3);
+  assert(file4);
 });
 
-/* Delete The Test Files */
+Deno.test("modernize-transcript/main: Delete The Test Files", async () => {
+  await Deno.remove(`${BASE_URL}/test-files/test-modernized.md`);
+  await Deno.remove(`${BASE_URL}/test-files/test-wfl.md`);
+  await Deno.remove(`${BASE_URL}/test-files/test-modernized.txt`);
+  await Deno.remove(`${BASE_URL}/test-files/test-wfl.txt`);
+
+  /* Check files have been removed */
+  const file1 = await exists(`${BASE_URL}/test-files/test-modernized.md`);
+  const file2 = await exists(`${BASE_URL}/test-files/test-wfl.md`);
+  const file3 = await exists(`${BASE_URL}/test-files/test-modernized.txt`);
+  const file4 = await exists(`${BASE_URL}/test-files/test-wfl.txt`);
+
+  assert(!file1);
+  assert(!file2);
+  assert(!file3);
+  assert(!file4);
+});
