@@ -1,12 +1,13 @@
 import {
+  assert,
   assertEquals,
-  assertExists,
   assertThrowsAsync,
 } from "https://deno.land/std/testing/asserts.ts";
+import { exists } from "https://deno.land/std/fs/mod.ts";
 import { main } from "../main.ts";
+import { BASE_URL } from "../constants.ts";
 
-// /** Errors **/
-// /* No Files Given as Arguments */
+/** Errors **/
 Deno.test("modernize-transcript/main: No Files Given as Arguments", async () => {
   const error1 = await assertThrowsAsync(async () => {
     await main([]);
@@ -15,18 +16,17 @@ Deno.test("modernize-transcript/main: No Files Given as Arguments", async () => 
   assertEquals(error1.message, "No Files Given!");
 });
 
-// /* One of the files is not a text or markdown file (pdf, image...) */
 Deno.test("modernize-transcript/main: One of the files is not a text or markdown file (pdf, image...)", async () => {
   const error1 = await assertThrowsAsync(async () => {
-    await main(["scripts/modernize-transcript/test-files/test.pdf"]);
+    await main([`${BASE_URL}/test-files/test.pdf`]);
   });
   const error2 = await assertThrowsAsync(async () => {
-    await main(["scripts/modernize-transcript/test-files/test.png"]);
+    await main([`${BASE_URL}/test-files/test.png`]);
   });
   const error3 = await assertThrowsAsync(async () => {
     await main([
-      "scripts/modernize-transcript/test-files/test.txt",
-      "scripts/modernize-transcript/test-files/test.pdf",
+      `${BASE_URL}/test-files/test.txt`,
+      `${BASE_URL}/test-files/test.pdf`,
     ]);
   });
 
@@ -38,9 +38,26 @@ Deno.test("modernize-transcript/main: One of the files is not a text or markdown
 /** Checks **/
 
 /** General Tests **/
-/* Tests That Should Not Produce Any Errors */
-// Deno
+Deno.test("modernize-transcript/main: Tests That Should Not Produce Any Errors", async () => {
+  await main([`${BASE_URL}/test-files/test.md`]);
+  await main([`${BASE_URL}/test-files/test.txt`]);
+  await main([
+    `${BASE_URL}/test-files/test.md`,
+    `${BASE_URL}/test-files/test.txt`,
+  ]);
+});
 
 /* Check If Files Have Been Created */
+Deno.test("modernize-transcript/main: Check If Files Have Been Created", async () => {
+const file1 = await exists(`${BASE_URL}/test-files/test-modernized.md`);
+const file2 = await exists(`${BASE_URL}/test-files/test-wfl.md`);
+const file3 = await exists(`${BASE_URL}/test-files/test-modernized.txt`);
+const file4 = await exists(`${BASE_URL}/test-files/test-wfl.txt`);
+
+assert(file1);
+assert(file2);
+assert(file3);
+assert(file4);
+});
 
 /* Delete The Test Files */
