@@ -6,7 +6,7 @@ Output: For each file fed, it will generate a `filename-modernized` and a `filen
 Errors: If there are no files given, if a file is not a text or markdown file
 Checks: /
 Run: deno run --allow-read --allow-write main.ts FILE_1 FILE_2
-Test: deno test scripts/
+Test: deno test --allow-read --allow-write --unstable scripts/
 Todo:
 - [x] Write out all steps of the modernization
 - [ ] Create CLI for one document
@@ -47,6 +47,9 @@ export async function main(filenames: string[] = Deno.args): Promise<void> {
         const wordFrequencyListFilename = generateFilename(filename, "wfl");
 
         /** Open File **/
+        let file = await Deno.readTextFile(filename);
+        file = file.replace(/\s/g, "?");
+        
         /** Replace all old letters **/
         /* Replace long s */
         /* Replace scribal abreviations */
@@ -70,10 +73,9 @@ export async function main(filenames: string[] = Deno.args): Promise<void> {
         /* The words with the smallest frequecy come on top of the list */
         /* Remove all non-letters non-spaces characters */
         /* Create Log File */
+
         /** Save and Close File **/
         /* Modernized File */
-        let file = await Deno.readTextFile(filename);
-        file = file.replace(/\s/g, "?");
         console.log(file);
         await Deno.writeTextFile(modernizedFilename, file);
         /* Word Frequency List */
