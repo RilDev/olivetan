@@ -47,7 +47,7 @@ export async function main(filenames: string[] = Deno.args): Promise<void> {
         let file = await Deno.readTextFile(filename);
 
         /** Replace all old letters **/
-        // file = replaceCharacters(file);
+        file = replaceCharacters(file);
         
         /** Update old spelling **/
         /* Correct "nm" combianation to "mm" for words such as "homme" or "comme" */
