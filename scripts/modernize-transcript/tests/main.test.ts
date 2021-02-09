@@ -2,8 +2,8 @@ import {
   assert,
   assertEquals,
   assertThrowsAsync,
-} from "https://deno.land/std/testing/asserts.ts";
-import { exists } from "https://deno.land/std/fs/mod.ts";
+} from "testing/asserts.ts";
+import { exists } from "fs/mod.ts";
 import { main } from "../main.ts";
 import { TEST_FILE_BASE_PATH } from "../constants.ts";
 

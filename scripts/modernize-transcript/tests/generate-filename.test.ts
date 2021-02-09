@@ -1,7 +1,7 @@
 import {
   assertEquals,
   assertThrows,
-} from "https://deno.land/std/testing/asserts.ts";
+} from "testing/asserts.ts";
 import { generateFilename } from "../generate-filename.ts";
 import { ALLOWED_FILENAME_CHARACTERS } from "../constants.ts";
 

@@ -1,7 +1,7 @@
 import {
   assertEquals,
   assertThrows,
-} from "https://deno.land/std/testing/asserts.ts";
+} from "testing/asserts.ts";
 import {
   escapeRegExpSpecialCharacters,
   replaceAncientCharacters,
