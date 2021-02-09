@@ -9,10 +9,8 @@ Run: deno run --allow-read --allow-write scripts/modernize-transcript/main.ts FI
 Test: deno test --allow-read --allow-write --unstable scripts/modernize-transcript/
 Todo:
 - [x] Write out all steps of the modernization
-- [ ] Create CLI for one document
-- [ ] Upgrade CLI to take in many documents at once
-- [ ] Split code in modules to use them separatlely (Word frequency first)
-- [ ] Add a separate `word-frequency-list.ts` script to only generate a word frequency list
+- [ ] Create CLI
+- [ ] Split code to common directory to reuse in word-frequency-list CLI
 - [ ] Add tests
 */
 
@@ -44,8 +42,6 @@ export async function main(filenames: string[] = Deno.args): Promise<void> {
         /** Initialize Variables **/
         // Name of the modernized file: [filename]-modernized.[file extension]
         const modernizedFilename = generateFilename(filename, "modernized");
-        // Name of the word frequency list file: [filename]-wfl.[file extension]
-        const wordFrequencyListFilename = generateFilename(filename, "wfl");
 
         /** Open File **/
         let file = await Deno.readTextFile(filename);
@@ -85,8 +81,6 @@ export async function main(filenames: string[] = Deno.args): Promise<void> {
         /** Save and Close File **/
         /* Modernized File */
         await Deno.writeTextFile(modernizedFilename, file);
-        /* Word Frequency List */
-        await Deno.writeTextFile(wordFrequencyListFilename, file);
     }
 }
 
