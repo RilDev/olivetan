@@ -29,13 +29,13 @@ Deno.test("modernize-transcript/escapeRegExpSpecialCharacters: Input is an empty
 /** General Testing **/
 /* replaceCharacters */
 Deno.test("modernize-transcript/replaceCharacters: Input Texts", () => {
-  // assertEquals(replaceCharacters("test"), "test");
-  // assertEquals(replaceCharacters("teſt"), "test");
-  // assertEquals(replaceCharacters("tẽst"), "tenst");
-  // assertEquals(replaceCharacters("tẽſt"), "tenst");
-  // assertEquals(replaceCharacters("question"), "question");
-  // assertEquals(replaceCharacters("q̃stiõ"), "question");
-  // assertEquals(replaceCharacters("ã ãſwer"), "an answer");
+  assertEquals(replaceCharacters("test"), "test");
+  assertEquals(replaceCharacters("teſt"), "test");
+  assertEquals(replaceCharacters("tẽst"), "tenst");
+  assertEquals(replaceCharacters("tẽſt"), "tenst");
+  assertEquals(replaceCharacters("question"), "question");
+  assertEquals(replaceCharacters("q̃stiõ"), "question");
+  assertEquals(replaceCharacters("ã ãſwer"), "an answer");
   assertEquals(replaceCharacters(`Treſcher ie deſire quẽ toutes choſes
   tu proſpere/ & que ſois en ſante/ comme
   ton ame eſt en ꝓſperite.`), "Trescher ie desire quen toutes choses\n  tu prospere; & que sois en sante; comme\n  ton ame est en prosperite.")
