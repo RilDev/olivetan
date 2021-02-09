@@ -39,6 +39,9 @@ export const main = (filenames: string[] = Deno.args) => {
     // For testing purposes, the filenames is past as an argument of main()
 
     /** Loop Through All Filenames **/
+    /** Initialize Variables **/
+    // group all variables used in the loop here as they are being created...
+
     /** Open Filename **/
 
     /** Analyze File **/
