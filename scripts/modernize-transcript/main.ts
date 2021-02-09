@@ -15,7 +15,7 @@ Todo:
 */
 
 import { generateFilename } from "./generate-filename.ts";
-import { replaceCharacters } from "./replace-characters.ts";
+import { replaceAncientCharacters } from "./replace-ancient-characters.ts";
 
 export async function main(filenames: string[] = Deno.args): Promise<void> {
     /** Get All CLI Arguments **/
@@ -47,7 +47,7 @@ export async function main(filenames: string[] = Deno.args): Promise<void> {
         let file = await Deno.readTextFile(filename);
 
         /** Replace all old letters **/
-        file = replaceCharacters(file);
+        file = replaceAncientCharacters(file);
         
         /** Update old spelling **/
         /* Correct "nm" combination to "mm" for words such as "homme" or "comme" */

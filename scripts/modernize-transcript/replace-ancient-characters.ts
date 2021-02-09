@@ -20,7 +20,7 @@ interface ObjectOfStrings {
   [key: string]: string;
 }
 
-export const replaceCharacters = (text: string): string => {
+export const replaceAncientCharacters = (text: string): string => {
   /** Initialize Variables **/
   /* Sanitized Text */
   let sanitizedText = "";
