@@ -25,6 +25,7 @@ test | 5 | 10%
 Todo:
 - [x] Write algorithm
 - [ ] Code CLI
+- [ ] Move all functions shared with modernize-transcript to scripts/common/
 - [ ] Test CLI
 */
 
