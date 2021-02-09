@@ -5,8 +5,8 @@ Input: Text Files
 Output: For each file fed, it will generate a `filename-modernized` and a `filename-wfl` file. The first is the modernized version of the text, the other a word frequency list.
 Errors: If there are no files given, if a file is not a text or markdown file
 Checks: /
-Run: deno run --allow-read --allow-write main.ts FILE_1 FILE_2
-Test: deno test --allow-read --allow-write --unstable scripts/
+Run: deno run --allow-read --allow-write scripts/modernize-transcript/main.ts FILE_1 FILE_2
+Test: deno test --allow-read --allow-write --unstable scripts/modernize-transcript/
 Todo:
 - [x] Write out all steps of the modernization
 - [ ] Create CLI for one document
