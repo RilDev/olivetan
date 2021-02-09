@@ -50,7 +50,7 @@ export async function main(filenames: string[] = Deno.args): Promise<void> {
         file = replaceCharacters(file);
         
         /** Update old spelling **/
-        /* Correct "nm" combianation to "mm" for words such as "homme" or "comme" */
+        /* Correct "nm" combination to "mm" for words such as "homme" or "comme" */
         /* Replace "n" to "m" for words such as "hone" -> "home" & "cone" -> "come" */
         /* Replace "i" to "j" for the following list of words. ex: "iamais" -> "jamais" */
         /* Replace "u" to "v" for the following list of words. ex: "suyuant" -> "suyvant" */
