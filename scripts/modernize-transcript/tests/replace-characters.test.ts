@@ -10,11 +10,10 @@ import { ANCIENT_CHARACTERS, THIRD_EPISTLE_OF_JOHN } from "../constants.ts";
 
 /** Errors **/
 /* replaceCharacters */
-// Deno.test("modernize-transcript/replaceCharacters: Input Texts", () => {
-//   replaceCharacters("abc");
-// });
+// no input and input not a string already taken care of by TypeScript type checking!
 
 /* escapeRegExpSpecialCharacters */
+// no input and input not an object of strings already taken care of by TypeScript type checking!
 
 /** Checks **/
 /* replaceCharacters */

@@ -4,11 +4,11 @@ Goal: Replace single characters such as "ſ" and "q̃" with their modern equival
 Input: string
 Output: string
 Errors: No input, input not a string
-Checks: check if input has any charaters we'd like to replace
+Checks: /
 Notes:
   How to optimize search/replace? https://stackoverflow.com/questions/60627009/javascript-from-an-optimization-standpoint-how-should-one-replace-multiple-sub
   RegExp escaping: https://javascript.info/regexp-escaping
-  Todo:
+Todo:
 - [ ] create list of characters to replace
 - [ ] build function
 - [ ] test function
@@ -41,8 +41,6 @@ export const replaceCharacters = (text: string): string => {
     "g",
   );
 
-  /** Checks **/
-
   /** Core **/
   /* Replace all targeted characters */
   sanitizedText = text.replace(
@@ -57,6 +55,7 @@ export const escapeRegExpSpecialCharacters = (
   charatersToCheck: ObjectOfStrings,
 ): string[] => {
   /** Errors **/
+  // no input and input not an object of strings already taken care of by TypeScript type checking!
 
   /** Checks **/
   /* Input is an empty object */
