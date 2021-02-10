@@ -3,7 +3,7 @@ import {
   assertThrows,
 } from "testing/asserts.ts";
 import { generateFilename } from "../generate-filename.ts";
-import { ALLOWED_FILENAME_CHARACTERS } from "../constants.ts";
+import { ALLOWED_FILENAME_CHARACTERS } from "../../constants.ts";
 
 /** Errors **/
 Deno.test("modernize-transcript/generateFilename: filename or stringToAppend are empty strings", () => {

@@ -6,7 +6,7 @@ import {
   escapeRegExpSpecialCharacters,
   replaceAncientCharacters,
 } from "../replace-ancient-characters.ts";
-import { ANCIENT_CHARACTERS, THIRD_EPISTLE_OF_JOHN } from "../constants.ts";
+import { ANCIENT_CHARACTERS, THIRD_EPISTLE_OF_JOHN } from "../../constants.ts";
 
 /** Errors **/
 /* replaceAncientCharacters */

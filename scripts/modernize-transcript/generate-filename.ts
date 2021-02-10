@@ -13,7 +13,7 @@ Todo:
 - [x] Add assertEquals in the Error tests to make sure the error message displays correctly
 */
 
-import { ALLOWED_FILENAME_CHARACTERS } from "./constants.ts";
+import { ALLOWED_FILENAME_CHARACTERS } from "../constants.ts";
 
 export const generateFilename = (
   filename: string,

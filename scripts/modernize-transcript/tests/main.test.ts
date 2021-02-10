@@ -5,7 +5,7 @@ import {
 } from "testing/asserts.ts";
 import { exists } from "fs/mod.ts";
 import { main } from "../main.ts";
-import { TEST_FILE_BASE_PATH } from "../constants.ts";
+import { TEST_FILE_BASE_PATH } from "../../constants.ts";
 
 /** Errors **/
 Deno.test("modernize-transcript/main: No Files Given as Arguments", async () => {

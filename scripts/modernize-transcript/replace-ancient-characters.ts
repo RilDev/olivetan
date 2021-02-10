@@ -14,7 +14,7 @@ Todo:
 - [ ] test function
 */
 
-import { ANCIENT_CHARACTERS, REGEXP_SPECIAL_CHARACTERS } from "./constants.ts";
+import { ANCIENT_CHARACTERS, REGEXP_SPECIAL_CHARACTERS } from "../constants.ts";
 
 interface ObjectOfStrings {
   [key: string]: string;
