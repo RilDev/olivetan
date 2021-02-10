@@ -1,5 +1,5 @@
+/** Error **/
 export const ALLOWED_FILENAME_CHARACTERS = /[^A-Za-z0-9\-_\.\/]/;
-export const TEST_FILE_BASE_PATH = "scripts/modernize-transcript";
 export const REGEXP_SPECIAL_CHARACTERS = [
   "[",
   "]",
@@ -15,6 +15,10 @@ export const REGEXP_SPECIAL_CHARACTERS = [
   ")",
 ];
 
+/** Configuration **/
+export const TEST_FILE_BASE_PATH = "scripts/modernize-transcript";
+
+/** Custom **/
 export const ANCIENT_CHARACTERS = {
   "ſ": "s",
   "ẽ": "en",
@@ -34,6 +38,7 @@ export const ANCIENT_CHARACTERS = {
   "/": ";",
 };
 
+/* Dictionaries */
 export const MISSPELLED_WORDS_DUE_TO_CHARACTER_MODERNIZATION = {
   // when "õ" should become "om"
   "acconplies": "accomplies",
@@ -269,6 +274,7 @@ export const WORDS_TO_MODERNIZE = {
   "vtile":"utile",
 };
 
+/* Texts */
 export const THIRD_EPISTLE_OF_JOHN = `¶La tierce epiſtre de ſainct
 Iehan Theologien.
 Chapitre ſeul.
