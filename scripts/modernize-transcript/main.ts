@@ -13,7 +13,7 @@ Todo:
 - [ ] Split code to common directory to reuse in word-frequency-list CLI
 - [ ] split file creation to /utils/create-file.ts
 - [x] Add tests
-- [ ] use the throw-errors functions
+- [x] use the throw-errors functions
 */
 
 import { generateFilename } from "./generate-filename.ts";
