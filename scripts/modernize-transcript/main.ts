@@ -13,6 +13,7 @@ Todo:
 - [ ] Split code to common directory to reuse in word-frequency-list CLI
 - [ ] split file creation to /utils/create-file.ts
 - [x] Add tests
+- [ ] use the throw-errors functions
 */
 
 import { generateFilename } from "./generate-filename.ts";
@@ -23,25 +24,26 @@ import {
   MISSPELLED_WORDS_DUE_TO_CHARACTER_MODERNIZATION,
   WORDS_TO_MODERNIZE,
 } from "../constants.ts";
+import {
+  throwErrorArrayLengthIsZero,
+  throwErrorFileExtensionNotSupported,
+} from "../utils/throw-errors.ts";
 
 export async function main(filenames: string[] = Deno.args): Promise<void> {
   /** Get All CLI Arguments **/
   // In order to be able to test the input of the `main()` function, I instanciate `filenames = Deno.args` directly as a parameter.
 
   /** Errors **/
-  /* No Files Given as Arguments */
-  if (filenames.length === 0) {
-    throw Error("No Files Given!");
-  }
-
-  /* One of the files is not a text or markdown file (pdf, image...) */
-  for (const filename of filenames) {
-    // get the filename extension
-    const filenameExtension = filename.split(".")[1];
-    
-    if (filenameExtension !== "txt" && filenameExtension !== "md") {
-      throw Error("Only txt and md files are accepted!");
-    }
+  /* No Filenames given */
+  throwErrorArrayLengthIsZero(filenames, "No Filenames given!");
+  /* File Type Not Supported */
+  // If file type is not .md and is not .txt -> throw error
+  for (const file of filenames) {
+    throwErrorFileExtensionNotSupported(
+      file,
+      ["md", "txt"],
+      "File has an unsupported extension! Supported extensions are: md, txt",
+    );
   }
   
   /** Loop Through All The Files **/
