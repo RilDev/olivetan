@@ -128,6 +128,10 @@ export const WORDS_TO_MODERNIZE = {
   "reiecte": "rejecte",
   "resiouye": "resjouye",
   "tousiours": "tousjours",
+  "iayme":"jayme",
+  "iauoye": "javoye",
+  "Iude": "Jude",
+  "Iacques": "Jacques",
   // u -> v
   "Dauid": "David",
   "Euangile": "Evangile",

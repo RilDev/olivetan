@@ -38,27 +38,32 @@ export async function main(filenames: string[] = Deno.args): Promise<void> {
   for (const filename of filenames) {
     // get the filename extension
     const filenameExtension = filename.split(".")[1];
-
+    
     if (filenameExtension !== "txt" && filenameExtension !== "md") {
       throw Error("Only txt and md files are accepted!");
     }
   }
-
+  
   /** Loop Through All The Files **/
   for (const filename of filenames) {
     /** Initialize Variables **/
     // Name of the modernized file: [filename]-modernized.[file extension]
     const modernizedFilename = generateFilename(filename, "modernized");
-
+    
     /** Open File **/
     let file = await Deno.readTextFile(filename);
-
-    /** Replace all old letters **/
-    file = replaceAncientCharacters(file);
-
-    /** Update old spelling **/
-    file = replaceWords(file, MISSPELLED_WORDS_DUE_TO_CHARACTER_MODERNIZATION);
-    file = replaceWords(file, WORDS_TO_MODERNIZE);
+    
+    /** Remove unused characters **/
+    /* Remove superscript letters */
+    file = replaceWithRegExp(file, "[\\u1d43-\\u1dbb]", "");
+    /* Remove asterixes */
+    file = replaceWithRegExp(file, "\\*", "");
+    /* Replace Line Breaks with a space */
+    file = replaceWithRegExp(file, "\\n", " ");
+    /* Remove "꞊" and all spaces around it */
+    file = replaceWithRegExp(file, "\\s*꞊\\s*", "");
+    /* Remove all multiple spaces */
+    file = replaceWithRegExp(file, "\\s+", " ");
 
     /** Modernize punctuation **/
     /* ".": no space before, add space after */
@@ -84,13 +89,12 @@ export async function main(filenames: string[] = Deno.args): Promise<void> {
     /* '-': no space before, no space after */
     file = replaceWithRegExp(file, "\\s*-\\s*", "-");
 
-    /** Remove unused characters **/
-    /* Remove superscript letters */
-    /* Remove asterixes */
-    /* Remove Line Breaks */
-    /* Remove "꞊" and all spaces around it */
-    // sanitizedText = text.replace(/\n/g, " ");
-    /* Remove all multiple spaces */
+    /** Replace all old letters **/
+    file = replaceAncientCharacters(file);
+
+    /** Update old spelling **/
+    file = replaceWords(file, MISSPELLED_WORDS_DUE_TO_CHARACTER_MODERNIZATION);
+    file = replaceWords(file, WORDS_TO_MODERNIZE);
 
     /** Log out all words and their frequency to ease the search of typos */
     /* The words with the smallest frequecy come on top of the list */
