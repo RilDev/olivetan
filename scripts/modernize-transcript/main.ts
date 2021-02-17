@@ -17,6 +17,8 @@ Todo:
 
 import { generateFilename } from "./generate-filename.ts";
 import { replaceAncientCharacters } from "./replace-ancient-characters.ts";
+import { replaceWords } from "./replace-words.ts";
+import { MISSPELLED_WORDS_DUE_TO_CHARACTER_MODERNIZATION, WORDS_TO_MODERNIZE } from "../constants.ts";
 
 export async function main(filenames: string[] = Deno.args): Promise<void> {
     /** Get All CLI Arguments **/
@@ -51,11 +53,8 @@ export async function main(filenames: string[] = Deno.args): Promise<void> {
         file = replaceAncientCharacters(file);
         
         /** Update old spelling **/
-        /* Correct "nm" combination to "mm" for words such as "homme" or "comme" */
-        /* Replace "n" to "m" for words such as "hone" -> "home" & "cone" -> "come" */
-        /* Replace "i" to "j" for the following list of words. ex: "iamais" -> "jamais" */
-        /* Replace "u" to "v" for the following list of words. ex: "suyuant" -> "suyvant" */
-        /* Replace "v" to "u" for the following list of words. ex: "vni" -> "uni" */
+        file = replaceWords(file, MISSPELLED_WORDS_DUE_TO_CHARACTER_MODERNIZATION);
+        file = replaceWords(file, WORDS_TO_MODERNIZE);
         
         /** Modernize punctuation **/
         /* ".": no space before, add space after */
