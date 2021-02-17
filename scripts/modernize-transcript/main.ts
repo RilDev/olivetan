@@ -11,78 +11,96 @@ Todo:
 - [x] Write out all steps of the modernization
 - [ ] Create CLI
 - [ ] Split code to common directory to reuse in word-frequency-list CLI
-- [ ] Add tests
 - [ ] split file creation to /utils/create-file.ts
+- [ ] Add tests
 */
 
 import { generateFilename } from "./generate-filename.ts";
 import { replaceAncientCharacters } from "./replace-ancient-characters.ts";
 import { replaceWords } from "./replace-words.ts";
-import { MISSPELLED_WORDS_DUE_TO_CHARACTER_MODERNIZATION, WORDS_TO_MODERNIZE } from "../constants.ts";
+import { replaceWithRegExp } from "./replace-with-regexp.ts";
+import {
+  MISSPELLED_WORDS_DUE_TO_CHARACTER_MODERNIZATION,
+  WORDS_TO_MODERNIZE,
+} from "../constants.ts";
 
 export async function main(filenames: string[] = Deno.args): Promise<void> {
-    /** Get All CLI Arguments **/
-    // In order to be able to test the input of the `main()` function, I instanciate `filenames = Deno.args` directly as a parameter.
-    
-    /** Errors **/
-    /* No Files Given as Arguments */
-    if (filenames.length === 0) {
-        throw Error("No Files Given!");
+  /** Get All CLI Arguments **/
+  // In order to be able to test the input of the `main()` function, I instanciate `filenames = Deno.args` directly as a parameter.
+
+  /** Errors **/
+  /* No Files Given as Arguments */
+  if (filenames.length === 0) {
+    throw Error("No Files Given!");
+  }
+
+  /* One of the files is not a text or markdown file (pdf, image...) */
+  for (const filename of filenames) {
+    // get the filename extension
+    const filenameExtension = filename.split(".")[1];
+
+    if (filenameExtension !== "txt" && filenameExtension !== "md") {
+      throw Error("Only txt and md files are accepted!");
     }
+  }
 
-    /* One of the files is not a text or markdown file (pdf, image...) */
-    for (const filename of filenames) {
-        // get the filename extension
-        const filenameExtension = filename.split(".")[1];
+  /** Loop Through All The Files **/
+  for (const filename of filenames) {
+    /** Initialize Variables **/
+    // Name of the modernized file: [filename]-modernized.[file extension]
+    const modernizedFilename = generateFilename(filename, "modernized");
 
-        if (filenameExtension !== "txt" && filenameExtension !== "md") {
-            throw Error("Only txt and md files are accepted!");
-        }
-    }
+    /** Open File **/
+    let file = await Deno.readTextFile(filename);
 
-    /** Loop Through All The Files **/
-    for (const filename of filenames) {
-        /** Initialize Variables **/
-        // Name of the modernized file: [filename]-modernized.[file extension]
-        const modernizedFilename = generateFilename(filename, "modernized");
+    /** Replace all old letters **/
+    file = replaceAncientCharacters(file);
 
-        /** Open File **/
-        let file = await Deno.readTextFile(filename);
+    /** Update old spelling **/
+    file = replaceWords(file, MISSPELLED_WORDS_DUE_TO_CHARACTER_MODERNIZATION);
+    file = replaceWords(file, WORDS_TO_MODERNIZE);
 
-        /** Replace all old letters **/
-        file = replaceAncientCharacters(file);
-        
-        /** Update old spelling **/
-        file = replaceWords(file, MISSPELLED_WORDS_DUE_TO_CHARACTER_MODERNIZATION);
-        file = replaceWords(file, WORDS_TO_MODERNIZE);
-        
-        /** Modernize punctuation **/
-        /* ".": no space before, add space after */
-        file = file.replace(/\s*\.\s*/g, ". ");
-        /* ",": no space before, add space after */
-        /* ";": no space before, add space after */
-        /* ":": add space before, add space after */
-        /* "(": add space before, no space after */
-        /* ")": no space before, add space after */
-        /* "&": add space before, add space after */
-        
-        /** Remove unused characters **/
-        /* Remove superscript letters */
-        /* Remove "꞊" */
-        /* Remove asterixes */
-        /* Remove Line Breaks */
-        // sanitizedText = text.replace(/\n/g, " ");
-        /* Remove all multiple spaces */
-        
-        /** Log out all words and their frequency to ease the search of typos */
-        /* The words with the smallest frequecy come on top of the list */
-        /* Remove all non-letters non-spaces characters */
-        /* Create Log File */
+    /** Modernize punctuation **/
+    /* ".": no space before, add space after */
+    file = replaceWithRegExp(file, "\\s*\\.\\s*", ". ");
+    /* ",": no space before, add space after */
+    file = replaceWithRegExp(file, "\\s*,\\s*", ", ");
+    /* ";": add space before, add space after */
+    file = replaceWithRegExp(file, "\\s*;\\s*", " ; ");
+    /* ":": add space before, add space after */
+    file = replaceWithRegExp(file, "\\s*:\\s*", " : ");
+    /* "(": add space before, no space after */
+    file = replaceWithRegExp(file, "\\s*\\(\\s*", " (");
+    /* ")": no space before, add space after */
+    file = replaceWithRegExp(file, "\\s*\\)\\s*", ") ");
+    /* "&": add space before, add space after */
+    file = replaceWithRegExp(file, "\\s*&\\s*", " & ");
+    /* "?": add space before, add space after */
+    file = replaceWithRegExp(file, "\\s*\\?\\s*", " ? ");
+    /* "!": add space before, add space after */
+    file = replaceWithRegExp(file, "\\s*!\\s*", " ! ");
+    /* '"': add space before, add space after */
+    file = replaceWithRegExp(file, '\\s*"\\s*', ' " ');
+    /* '-': no space before, no space after */
+    file = replaceWithRegExp(file, "\\s*-\\s*", "-");
 
-        /** Save and Close File **/
-        /* Modernized File */
-        await Deno.writeTextFile(modernizedFilename, file);
-    }
+    /** Remove unused characters **/
+    /* Remove superscript letters */
+    /* Remove asterixes */
+    /* Remove Line Breaks */
+    /* Remove "꞊" and all spaces around it */
+    // sanitizedText = text.replace(/\n/g, " ");
+    /* Remove all multiple spaces */
+
+    /** Log out all words and their frequency to ease the search of typos */
+    /* The words with the smallest frequecy come on top of the list */
+    /* Remove all non-letters non-spaces characters */
+    /* Create Log File */
+
+    /** Save and Close File **/
+    /* Modernized File */
+    await Deno.writeTextFile(modernizedFilename, file);
+  }
 }
 
 /** Execute Script **/

@@ -11,13 +11,12 @@ Error:
 - [x] missing input
 - [x] input not expected type
 Note:
-- [x] sanitize the regex string
+- [x] sanitize the regex string (canceled)
 Todo:
 - [x] make algorithm
-- [ ] code function
+- [x] code function
 - [ ] test function
 **/
-
 export const replaceWithRegExp = (
   textToModify: string,
   regularExpression: string,
@@ -31,14 +30,14 @@ export const replaceWithRegExp = (
 
   /** Core **/
   /* sanitize regularExpression string */
-  const sanitizedRegex = "";
+  // since there are actual regular expression, sanitization is not needed!
 
   /* initialize variables */
   let resultText = "";
-  const regex = new RegExp(`${regularExpression}`, "g");
+  const resultRegExp = new RegExp(`${regularExpression}`, "g");
 
   /* run replace on textToModify */
-  resultText = textToModify.replace(regex, textToReplaceWith);
+  resultText = textToModify.replace(resultRegExp, textToReplaceWith);
 
   /* return result */
   return resultText;
