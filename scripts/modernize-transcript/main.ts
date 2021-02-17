@@ -58,6 +58,7 @@ export async function main(filenames: string[] = Deno.args): Promise<void> {
         
         /** Modernize punctuation **/
         /* ".": no space before, add space after */
+        file = file.replace(/\s*\.\s*/g, ". ");
         /* ",": no space before, add space after */
         /* ";": no space before, add space after */
         /* ":": add space before, add space after */
