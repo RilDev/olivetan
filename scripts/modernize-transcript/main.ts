@@ -12,6 +12,7 @@ Todo:
 - [ ] Create CLI
 - [ ] Split code to common directory to reuse in word-frequency-list CLI
 - [ ] Add tests
+- [ ] split file creation to /utils/create-file.ts
 */
 
 import { generateFilename } from "./generate-filename.ts";

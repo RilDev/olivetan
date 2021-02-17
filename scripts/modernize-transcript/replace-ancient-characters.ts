@@ -9,9 +9,9 @@ Notes:
   How to optimize search/replace? https://stackoverflow.com/questions/60627009/javascript-from-an-optimization-standpoint-how-should-one-replace-multiple-sub
   RegExp escaping: https://javascript.info/regexp-escaping
 Todo:
-- [ ] create list of characters to replace
-- [ ] build function
-- [ ] test function
+- [x] create list of characters to replace
+- [x] build function
+- [x] test function
 */
 
 import { ANCIENT_CHARACTERS, REGEXP_SPECIAL_CHARACTERS } from "../constants.ts";
