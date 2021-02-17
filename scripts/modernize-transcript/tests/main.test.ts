@@ -30,9 +30,9 @@ Deno.test("modernize-transcript/main: One of the files is not a text or markdown
     ]);
   });
 
-  assertEquals(error1.message, "Only txt and md files are accepted!");
-  assertEquals(error2.message, "Only txt and md files are accepted!");
-  assertEquals(error3.message, "Only txt and md files are accepted!");
+  assertEquals(error1.message, "File has an unsupported extension! Supported extensions are: md, txt");
+  assertEquals(error2.message, "File has an unsupported extension! Supported extensions are: md, txt");
+  assertEquals(error3.message, "File has an unsupported extension! Supported extensions are: md, txt");
 });
 
 /** Checks **/

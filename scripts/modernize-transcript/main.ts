@@ -35,7 +35,7 @@ export async function main(filenames: string[] = Deno.args): Promise<void> {
 
   /** Errors **/
   /* No Filenames given */
-  throwErrorArrayLengthIsZero(filenames, "No Filenames given!");
+  throwErrorArrayLengthIsZero(filenames, "No Files Given!");
   /* File Type Not Supported */
   // If file type is not .md and is not .txt -> throw error
   for (const filename of filenames) {
