@@ -9,10 +9,10 @@ Run: deno run --allow-read --allow-write scripts/modernize-transcript/main.ts FI
 Test: deno test --allow-read --allow-write --unstable scripts/modernize-transcript/
 Todo:
 - [x] Write out all steps of the modernization
-- [ ] Create CLI
+- [x] Create CLI
 - [ ] Split code to common directory to reuse in word-frequency-list CLI
 - [ ] split file creation to /utils/create-file.ts
-- [ ] Add tests
+- [x] Add tests
 */
 
 import { generateFilename } from "./generate-filename.ts";
