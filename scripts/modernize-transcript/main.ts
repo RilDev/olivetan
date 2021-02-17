@@ -38,9 +38,9 @@ export async function main(filenames: string[] = Deno.args): Promise<void> {
   throwErrorArrayLengthIsZero(filenames, "No Filenames given!");
   /* File Type Not Supported */
   // If file type is not .md and is not .txt -> throw error
-  for (const file of filenames) {
+  for (const filename of filenames) {
     throwErrorFileExtensionNotSupported(
-      file,
+      filename,
       ["md", "txt"],
       "File has an unsupported extension! Supported extensions are: md, txt",
     );
