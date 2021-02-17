@@ -8,6 +8,7 @@
 .docusaurus
 .cache-loader
 *-modernized.md
+*-wfl.md
 
 # Misc
 .DS_Store
