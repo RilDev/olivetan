@@ -29,6 +29,7 @@ Todo:
 - [ ] Test CLI
 - [ ] Move generate-filename to utils
 - [ ] Move replace-with-regexp to utils
+- [ ] Add in file description: "Unique words count: [uniqueWordsCount]"
 */
 import {
   throwErrorArrayLengthIsZero,
