@@ -30,6 +30,8 @@ Todo:
 - [ ] Move generate-filename to utils
 - [ ] Move replace-with-regexp to utils
 - [ ] Add in file description: "Unique words count: [uniqueWordsCount]"
+- [x] Add a rank column before the word with auto-increment id
+- [ ] Always output a MD file
 */
 import {
   throwErrorArrayLengthIsZero,
@@ -112,15 +114,15 @@ Total number of words: ${wordsCount}
 
 `;
     // Build Table
-    outputFile += `Word | Occurrences | Frequency
---- | --- | ---
+    outputFile += `Rank | Word | Occurrences | Frequency
+--- | --- | --- | ---
 `;
     //// Foreach word in the Set of words create new line:
     //// Word column: the key
     //// Occurrences column: the value
     //// Frequency: (occurrence / total word count) * 100 + '%'
-    for (const word of sortedDictionary) {
-        outputFile += `${word[0]} | ${word[1]} | ${((word[1] / wordsCount) * 100).toFixed(2)}%
+    for (const [id, word] of sortedDictionary.entries()) {
+        outputFile += `${id} | ${word[0]} | ${word[1]} | ${((word[1] / wordsCount) * 100).toFixed(2)}%
 `;
     }
 
