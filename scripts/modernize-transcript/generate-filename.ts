@@ -56,6 +56,7 @@ export const generateFilename = (
   const filenameList: string[] = filename.split(".");
   const filenameName: string = filenameList[0];
   const filenameExtension: string = filenameList[1];
+
   /* Append `-${appendToFilename}` */
   generatedFilename = `${filenameName}-${stringToAppend}.${filenameExtension}`;
 
