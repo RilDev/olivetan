@@ -21,6 +21,7 @@ import { replaceAncientCharacters } from "./replace-ancient-characters.ts";
 import { replaceWords } from "./replace-words.ts";
 import { replaceWithRegExp } from "./replace-with-regexp.ts";
 import {
+  MISSPELLED_WORDS_DUE_TO_AI_OR_HUMAN_MISTAKE,
   MISSPELLED_WORDS_DUE_TO_CHARACTER_MODERNIZATION,
   WORDS_TO_MODERNIZE,
 } from "../constants.ts";
@@ -45,16 +46,16 @@ export async function main(filenames: string[] = Deno.args): Promise<void> {
       "File has an unsupported extension! Supported extensions are: md, txt",
     );
   }
-  
+
   /** Loop Through All The Files **/
   for (const filename of filenames) {
     /** Initialize Variables **/
     // Name of the modernized file: [filename]-modernized.[file extension]
     const modernizedFilename = generateFilename(filename, "modernized");
-    
+
     /** Open File **/
     let file = await Deno.readTextFile(filename);
-    
+
     /** Remove unused characters **/
     /* Remove superscript letters */
     file = replaceWithRegExp(file, "[\\u1d43-\\u1dbb]", "");
@@ -66,6 +67,9 @@ export async function main(filenames: string[] = Deno.args): Promise<void> {
     file = replaceWithRegExp(file, "\\s*꞊\\s*", "");
     /* Remove all multiple spaces */
     file = replaceWithRegExp(file, "\\s+", " ");
+
+    /** Replace all old letters **/
+    file = replaceAncientCharacters(file);
 
     /** Modernize punctuation **/
     /* ".": no space before, add space after */
@@ -91,12 +95,10 @@ export async function main(filenames: string[] = Deno.args): Promise<void> {
     /* '-': no space before, no space after */
     file = replaceWithRegExp(file, "\\s*-\\s*", "-");
 
-    /** Replace all old letters **/
-    file = replaceAncientCharacters(file);
-
     /** Update old spelling **/
     file = replaceWords(file, MISSPELLED_WORDS_DUE_TO_CHARACTER_MODERNIZATION);
     file = replaceWords(file, WORDS_TO_MODERNIZE);
+    file = replaceWords(file, MISSPELLED_WORDS_DUE_TO_AI_OR_HUMAN_MISTAKE);
 
     /** Log out all words and their frequency to ease the search of typos */
     /* The words with the smallest frequecy come on top of the list */

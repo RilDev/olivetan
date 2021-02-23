@@ -33,6 +33,8 @@ Deno.test("scripts/modernize-transcript/replace-with-regexp: Success", () => {
   assertEquals(replaceWithRegExp(" ; ", "\\s*;\\s*", " ; "), " ; ");
   assertEquals(replaceWithRegExp("  ;  ", "\\s*;\\s*", " ; "), " ; ");
   assertEquals(replaceWithRegExp("test  ;  ", "\\s*;\\s*", " ; "), "test ; ");
+  assertEquals(replaceWithRegExp("test;test", "\\s*;\\s*", " ; "), "test ; test");
+  assertEquals(replaceWithRegExp("test; test", "\\s*;\\s*", " ; "), "test ; test");
   /* ":": add space before, add space after */
   assertEquals(replaceWithRegExp(":", "\\s*:\\s*", " : "), " : ");
   assertEquals(replaceWithRegExp(" : ", "\\s*:\\s*", " : "), " : ");

@@ -28,6 +28,7 @@ Deno.test("scripts/utils/sanitize-regexp-special-characters: Success", () => {
       "ĩ",
       "p̃",
       "ñ",
+      "ũ",
       "q́",
       "ꝰ",
       "ʳ",
