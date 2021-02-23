@@ -9,6 +9,7 @@
 .cache-loader
 *-modernized.md
 *-wfl.md
+*.txt
 
 # Misc
 .DS_Store
