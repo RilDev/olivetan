@@ -84,6 +84,7 @@ export const MISSPELLED_WORDS_DUE_TO_CHARACTER_MODERNIZATION = {
   "sonme": "somme",
   "sonmes": "sommes",
   "tonbera": "tombera",
+  "renplit": "remplit",
 };
 
 export const WORDS_TO_MODERNIZE = {
@@ -278,6 +279,7 @@ export const WORDS_TO_MODERNIZE = {
   "viuant": "vivant",
   "viue": "vive",
   "viuons": "vivons",
+  "sesleua": "sesleva",
   // v -> u
   "vmbres": "umbres",
   "vne": "une",
@@ -328,6 +330,10 @@ export const MISSPELLED_WORDS_DUE_TO_AI_OR_HUMAN_MISTAKE = {
   "ihau": "il) au",
   "pleuue": "fleuve",
   "psence": "presence",
+  "lhom me": "lhomme",
+  "hom me": "homme",
+  "che minoient": "cheminoient",
+  "troystesme": "troysiesme",
 };
 
 /* Texts */

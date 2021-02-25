@@ -14,6 +14,7 @@ Todo:
 - [ ] split file creation to /utils/create-file.ts
 - [x] Add tests
 - [x] use the throw-errors functions
+- [ ] regex function to search an replace words and spaces => ex: "Che rubins" -> "Cherubins"
 */
 
 import { generateFilename } from "./generate-filename.ts";
