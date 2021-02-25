@@ -21,6 +21,7 @@ import { generateFilename } from "./generate-filename.ts";
 import { replaceAncientCharacters } from "./replace-ancient-characters.ts";
 import { replaceWords } from "./replace-words.ts";
 import { replaceWithRegExp } from "./replace-with-regexp.ts";
+import { replaceMalformedWords } from "./replace-malformed-words.ts";
 import {
   MISSPELLED_WORDS_DUE_TO_AI_OR_HUMAN_MISTAKE,
   MISSPELLED_WORDS_DUE_TO_CHARACTER_MODERNIZATION,
@@ -99,7 +100,10 @@ export async function main(filenames: string[] = Deno.args): Promise<void> {
     /** Update old spelling **/
     file = replaceWords(file, MISSPELLED_WORDS_DUE_TO_CHARACTER_MODERNIZATION);
     file = replaceWords(file, WORDS_TO_MODERNIZE);
-    file = replaceWords(file, MISSPELLED_WORDS_DUE_TO_AI_OR_HUMAN_MISTAKE);
+    file = replaceMalformedWords(
+      file,
+      MISSPELLED_WORDS_DUE_TO_AI_OR_HUMAN_MISTAKE,
+    );
 
     /** Log out all words and their frequency to ease the search of typos */
     /* The words with the smallest frequecy come on top of the list */
