@@ -31,7 +31,7 @@ Todo:
 - [ ] Move replace-with-regexp to utils
 - [x] Add in file description: "Unique words count: [uniqueWordsCount]"
 - [x] Add a rank column before the word with auto-increment id
-- [ ] Always output a MD file
+- [ ] add parameter for generate file name to optionaly choose output extension
 */
 import {
   throwErrorArrayLengthIsZero,
@@ -111,6 +111,7 @@ export async function main(filenames: string[] = Deno.args) {
     outputFile += `# ${filename} - Word Frequency List
 
 Total number of words: ${wordsCount}
+
 Unique words count: ${sortedDictionary.length}
 
 `;
