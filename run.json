@@ -1,5 +1,7 @@
 {
     "scripts": {
-        "test": "deno test -A --unstable --import-map=import_map.json scripts/"
+        "test": "deno test -A --unstable --import-map=import_map.json scripts/",
+        "modernize": "deno run --allow-read --allow-write --unstable --import-map=import_map.json scripts/modernize-transcript/main.ts",
+        "wfl": "deno run --allow-read --allow-write --unstable --import-map=import_map.json scripts/word-frequency-list/main.ts"
     }
 }

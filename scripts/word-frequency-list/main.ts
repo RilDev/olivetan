@@ -5,8 +5,8 @@ Input: Text file (.md || .txt)
 Output: MarkDown file!
 Errors: No text file given, text file not .md or .txt
 Checks: /
-Run: deno run --allow-read --allow-write scripts/word-frequency-list/main.ts FILE_1 FILE_2
-Test: deno test --allow-read --allow-write --unstable scripts/word-frequency-list/
+Run: trex run wfl FILENAME1 FILENAME2
+Test: trex run test
 Notes: 
 - The CLI can take one or many files
 - The output file should have this format:
