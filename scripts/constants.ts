@@ -184,6 +184,7 @@ export const WORDS_TO_MODERNIZE = {
   "beuurons": "beuvrons",
   "beuuroyent": "beuvroyent",
   "breuuage": "breuvage",
+  "cheuaulx":"chevaulx",
   "conceuras": "concevras",
   "conseruez": "conservez",
   "conuaincuz": "convaincuz",
