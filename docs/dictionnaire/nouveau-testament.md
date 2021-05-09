@@ -19,7 +19,7 @@ netz | ???
 lyesse | ???
 boute | ???
 quadrin | ???
-es | contraction de "les"
+es | contraction de "les" ou vien orthographe alternatif de "en"
 cuydẽt | ???
 requeriez | faire la demande
 debvoir | devoir
@@ -28,3 +28,18 @@ la tigne | ???
 fouyre | creuser
 caver | creuser
 filler | tisser
+iceluy | celui-ci
+iceulx | ceux-ci
+adonc | alors
+somne | ???
+occir | tuer
+admoneste | ???
+yssoit | ???
+paraventure | ???
+derechef | ???
+liuvre | mis en prison
+oultre | ???
+retz | filets
+langueur | ???
+tourbes | Grand nombre de personnes jugées sans intérêt.
+debonnaires | ???
