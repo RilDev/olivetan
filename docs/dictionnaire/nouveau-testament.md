@@ -2,44 +2,68 @@
 
 Mot | Définition
 --- | ---
-trãſmigration | ???
-conuinſſent | ???
-ſẽqueroit | ???
-ſeſiouyrent | ???
-treſpas | ???
-occit | ???
-ia | contraction de "deia", deja
-coingnee | hache
-lengardoit | l'empecha
-paraventure | par hazard
-circuyoit | parcourir
-langueur | ???
-debonnaires | ???
-netz | ???
-lyesse | ???
+admoneste | ???
+adonc | alors
+appoincter | ???
+baille | ???
 boute | ???
-quadrin | ???
-es | contraction de "les" ou vien orthographe alternatif de "en"
-cuydẽt | ???
-requeriez | faire la demande
-debvoir | devoir
-quicter | liberer d'une dette, pardonner
-la tigne | ???
-fouyre | creuser
+boute | ??? (en prison) 
 caver | creuser
+certes | ???
+circuyoit | parcourir
+coingnee | hache
+conuinſſent | ???
+cooncile | ???
+courrouce | ???
+cuydẽt | ???
+debonnaires | ???
+debonnaires | ???
+debvoir | devoir
+derechef | ???
+es | contraction de "les" ou vien orthographe alternatif de "en" (veut dire "au"?)
+esiouyffez | ???
+expedient | ???
 filler | tisser
+fouyre | creuser
+ia | contraction de "deia", deja
 iceluy | celui-ci
 iceulx | ceux-ci
-adonc | alors
-somne | ???
-occir | tuer
-admoneste | ???
-yssoit | ???
-paraventure | ???
-derechef | ???
-liuvre | mis en prison
-oultre | ???
-retz | filets
+la tigne | ???
 langueur | ???
+langueur | ???
+lengardoit | l'empecha
+liuvre | mis en prison
+loyer | ???
+lyesse | ???
+lyesse | ???
+muyd | ???
+netz | ???
+netz | ???
+occir | tuer
+occit | ???
+oultrage | ???
+oultre | ???
+paraventure | ???
+paraventure | par hazard
+quadrin | ???
+quadrin | ??? (argent)
+quicter | liberer d'une dette, pardonner
+Racha | ???
+requeriez | faire la demande
+retz | filets
+ſẽqueroit | ???
+ſeſiouyrent | ???
+somne | ???
 tourbes | Grand nombre de personnes jugées sans intérêt.
-debonnaires | ???
+trãſmigration | ???
+treſpas | ???
+yssoit | ???
+coppe | (du verber copper)
+libelle | (lettre)
+derechef | (encore)
+parjureras | (briser un serment)???
+fermiers | (Financier qui affermait le recouvrement de certains impôts.
+seneſtre | gauche
+dextre | droite
+cabinet | (palcard?)
+huys | (porte?)
