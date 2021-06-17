@@ -65,5 +65,16 @@ parjureras | (briser un serment)???
 fermiers | (Financier qui affermait le recouvrement de certains impôts.
 seneſtre | gauche
 dextre | droite
-cabinet | (palcard?)
-huys | (porte?)
+cabinet | petite chambre retirée servant d'accessoire à une plus grande pièce
+huys | porte
+aduienne | arriver, se produire
+quicte | libéré d'une charge morale, d'une faute
+deffault | manquement, faute, péché
+chef | tête
+tigne | pièce de bois de charpente, poutre
+larron | voleur
+viande | nourriture, aliment
+couldee | ?unite de mesure
+Querez | ?chechez
+festu | ?brin de paille?
+Hurtez | ?frappez?
