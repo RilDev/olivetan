@@ -78,3 +78,6 @@ couldee | ?unite de mesure
 Querez | ?chechez
 festu | ?brin de paille?
 Hurtez | ?frappez?
+requierent | demander?
+ravissant | affamé?
+onc | pas? (negation)

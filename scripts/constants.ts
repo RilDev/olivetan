@@ -94,10 +94,13 @@ export const MISSPELLED_WORDS_DUE_TO_CHARACTER_MODERNIZATION = {
   chanp: "champ",
   chanps: "champs",
   conment: "comment",
+  lacconpareray: "laccompareray",
 };
 
 export const WORDS_TO_MODERNIZE = {
   // i -> j
+  iournee: "journee",
+  iette: "jette",
   tousioursmais: "tousjoursmais",
   auiourdhuy: "aujourdhuy",
   iniustes: "injustes",
@@ -117,6 +120,7 @@ export const WORDS_TO_MODERNIZE = {
   iay: "jay",
   iayme: "jayme",
   ie: "je",
+  Ie: "Je",
   iectez: "jectez",
   Iehan: "Jehan",
   Iehosua: "Jehosua",
@@ -487,6 +491,9 @@ export const WORDS_TO_MODERNIZE = {
   viuant: "vivant",
   viue: "vive",
   viuons: "vivons",
+  rauissans: "ravissans",
+  aduint: "advint",
+  acheue: "acheve",
   // v -> u
   vmbres: "umbres",
   vne: "une",
@@ -668,6 +675,13 @@ export const MISSPELLED_WORDS_DUE_TO_AI_OR_HUMAN_MISTAKE = {
   adoc: "adonc",
   "ti rer": "tirer",
   "deman de": "demande",
+  Qu: "Ou",
+  "vien nent": "viennent",
+  nouspoint: "nous point",
+  "con fesseray": "confesseray",
+  "fleu ues": "fleuves",
+  "pa rolles": "parolles",
+  "souf fle": "souffle",
 };
 
 /* Texts */
