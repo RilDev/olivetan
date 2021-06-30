@@ -494,6 +494,8 @@ export const WORDS_TO_MODERNIZE = {
   rauissans: "ravissans",
   aduint: "advint",
   acheue: "acheve",
+  griefuement: "griefvement",
+  sesmerueilla: "sesmerveilla",
   // v -> u
   vmbres: "umbres",
   vne: "une",
@@ -682,6 +684,11 @@ export const MISSPELLED_WORDS_DUE_TO_AI_OR_HUMAN_MISTAKE = {
   "fleu ues": "fleuves",
   "pa rolles": "parolles",
   "souf fle": "souffle",
+  "person ne": "personne",
+  "Cen tenier": "Centenier",
+  "gue riray": "gueriray",
+  "seulle ment": "seullement",
+  cesluy: "cestuy",
 };
 
 /* Texts */

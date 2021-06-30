@@ -81,3 +81,5 @@ Hurtez | ?frappez?
 requierent | demander?
 ravissant | affamé?
 onc | pas? (negation)
+ladre | lepreux?
+paralytique | paralise? sur le point de mourrir?
