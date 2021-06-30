@@ -689,6 +689,7 @@ export const MISSPELLED_WORDS_DUE_TO_AI_OR_HUMAN_MISTAKE = {
   "gue riray": "gueriray",
   "seulle ment": "seullement",
   cesluy: "cestuy",
+  Iatob: "Jakob"
 };
 
 /* Texts */
