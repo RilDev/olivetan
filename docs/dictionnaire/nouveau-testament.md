@@ -83,3 +83,7 @@ ravissant | affamé?
 onc | pas? (negation)
 ladre | lepreux?
 paralytique | paralise? sur le point de mourrir?
+illec | alors?
+recline | s'allonger?
+reprint | reprit/corriger/sermoner?
+monumens | tombes?
