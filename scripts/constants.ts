@@ -736,6 +736,8 @@ export const MISSPELLED_WORDS_DUE_TO_AI_OR_HUMAN_MISTAKE = {
   "be soing": "besoing",
   "pen dant": "pendant",
   "vien dront": "viendront",
+  "af feite": "affeite",
+  "rem plaige": "remplaige",
 };
 
 /* Texts */
