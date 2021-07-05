@@ -97,3 +97,6 @@ misericorde | ???
 affeite | vieille?
 remplaige | remplacement?
 rompure | déchirure?
+barilz | barrilles? bouteils?
+langueur | ???
+espars | disperse?
