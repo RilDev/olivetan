@@ -100,3 +100,9 @@ rompure | déchirure?
 barilz | barrilles? bouteils?
 langueur | ???
 espars | disperse?
+livra | trahit??
+oailles | brebis??
+peries | perdus??
+escouez | secouez??
+pouldre | poussiere??
+flagelleront | foueter??
