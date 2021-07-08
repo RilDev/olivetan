@@ -106,3 +106,7 @@ peries | perdus??
 escouez | secouez??
 pouldre | poussiere??
 flagelleront | foueter??
+paracheue | ?
+passereaux | petite oiseau?
+cherra | tombera
+traict | verre?

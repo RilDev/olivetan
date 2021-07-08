@@ -223,6 +223,8 @@ export const WORDS_TO_MODERNIZE = {
   beuurages: "beuvrages",
   beuuray: "beuvray",
   beuurez: "beuvrez",
+  sesleueront: "sesleveront",
+  cheueulx: "cheveulx",
   beuurons: "beuvrons",
   beuuroyent: "beuvroyent",
   breuuage: "breuvage",
@@ -269,6 +271,7 @@ export const WORDS_TO_MODERNIZE = {
   descouurirent: "descouvrirent",
   desuestu: "desvestu",
   deuant: "devant",
+  glaiue: "glaive",
   deuoient: "devoient",
   deuoit: "devoit",
   deuons: "devons",
@@ -447,11 +450,13 @@ export const WORDS_TO_MODERNIZE = {
   retrouue: "retrouve",
   reuelee: "revelee",
   reueler: "reveler",
+  reuele: "revele",
   saueur: "saveur",
   saulueur: "saulveur",
   sauuage: "sauvage",
   sauuassent: "sauvassent",
   sauue: "sauve",
+  paracheue: "paracheve",
   sauuee: "sauvee",
   sauuees: "sauvees",
   sauuer: "sauver",
@@ -523,6 +528,7 @@ export const WORDS_TO_MODERNIZE = {
   acheue: "acheve",
   griefuement: "griefvement",
   sesmerueilla: "sesmerveilla",
+  liurera: "livrera",
   // v -> u
   vmbres: "umbres",
   vne: "une",
@@ -551,6 +557,7 @@ export const MODERNIZE_CHAPTER_NAMES = {
   "Chapitre. x.": "Chapitre X",
   "Chapitre. xi.": "Chapitre XI",
   "Chapitre. xj.": "Chapitre XI",
+  "Chapitre.xj.": "Chapitre XI",
   "Chapitre. xii.": "Chapitre XII",
   "Chapitre. xij.": "Chapitre XII",
   "Chapitre. xiii.": "Chapitre XIII",
@@ -565,6 +572,11 @@ export const MODERNIZE_CHAPTER_NAMES = {
   "Chapitre. xviij.": "Chapitre XVIII",
   "Chapitre. xix.": "Chapitre XIX",
   "Chapitre. xx.": "Chapitre XX",
+};
+
+export const ADD_CHAPTER_FIRST_LETTER = {
+  "T advint que quand Jesus eut mis fin de":
+    "Et advint que quand Jesus eut mis fin de",
 };
 
 export const MISSPELLED_WORDS_DUE_TO_AI_OR_HUMAN_MISTAKE = {
@@ -779,6 +791,19 @@ export const MISSPELLED_WORDS_DUE_TO_AI_OR_HUMAN_MISTAKE = {
   "de partans": "departans",
   "Amor riens": "Amorriens",
   "assem blee": "assemblee",
+  "en fans": "en fans",
+  moirir: "mourir",
+  "sei gneur": "seigneur",
+  "Beel : ze bub": "Beel-zebub",
+  "Beel-ze bub": "Beel-zebub",
+  viennu: "vienne",
+  "ce luy": "celuy",
+  "pe re": "pere",
+  "nom brez": "nombrez",
+  fa: "sa",
+  neprent: "ne prent",
+  "trou uera": "trouuera",
+  "pro phete": "prophete",
 };
 
 /* Texts */
