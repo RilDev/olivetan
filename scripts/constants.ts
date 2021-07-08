@@ -541,6 +541,7 @@ export const WORDS_TO_MODERNIZE = {
 };
 
 export const MODERNIZE_CHAPTER_NAMES = {
+  "Chapitre premier.": "Chapitre I",
   "Chapitre. i.": "Chapitre I",
   "Chapitre. j.": "Chapitre I",
   "Chapitre. ij.": "Chapitre II",
@@ -557,7 +558,6 @@ export const MODERNIZE_CHAPTER_NAMES = {
   "Chapitre. x.": "Chapitre X",
   "Chapitre. xi.": "Chapitre XI",
   "Chapitre. xj.": "Chapitre XI",
-  "Chapitre.xj.": "Chapitre XI",
   "Chapitre. xii.": "Chapitre XII",
   "Chapitre. xij.": "Chapitre XII",
   "Chapitre. xiii.": "Chapitre XIII",
@@ -575,6 +575,17 @@ export const MODERNIZE_CHAPTER_NAMES = {
 };
 
 export const ADD_CHAPTER_FIRST_LETTER = {
+  "E livre de la generation": "Le livre de la generation",
+  "T quand Jesus fut nay en Beth-lehem cite de":
+    "Et quand Jesus fut nay en Beth-lehem cite de",
+  "R en ces jours la vient Jehan baptiste":
+    "Or en ces jours la vient Jehan baptiste",
+  "Lors Jesus fut mene par lesperit au desert":
+    "Alors Jesus fut mene par lesperit au desert",
+  "T quand Jesus veit les tourbes ; il monta":
+    "Et quand Jesus veit les tourbes ; il monta",
+"Ardez vous de faire aulmosne devant les": "Gardez vous de faire aulmosne devant les",
+"E jugez pas/affin que vous ne ſoyez iugez.":"E iugez pas/affin que vous ne ſoyez iugez.",
   "T advint que quand Jesus eut mis fin de":
     "Et advint que quand Jesus eut mis fin de",
 };
