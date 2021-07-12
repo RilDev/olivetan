@@ -99,10 +99,12 @@ export const MISSPELLED_WORDS_DUE_TO_CHARACTER_MODERNIZATION = {
 
 export const WORDS_TO_MODERNIZE = {
   // i -> j
+  ienuoye: "jenuoye",
   iournee: "journee",
   iette: "jette",
   tousioursmais: "tousjoursmais",
   auiourdhuy: "aujourdhuy",
+  iourdhuy: "jourdhuy",
   iniustes: "injustes",
   iustes: "justes",
   abiectz: "abjectz",
@@ -173,7 +175,10 @@ export const WORDS_TO_MODERNIZE = {
   ieusnons: "jeusnons",
   iours: "jours",
   ieusneront: "jeusneront",
+  ioug: "joug",
   // u -> v
+  trauaillez: "travaillez",
+  rauissent: "ravissent",
   leuant: "levant",
   viura: "vivra",
   suyuit: "suyvit",
@@ -584,10 +589,20 @@ export const ADD_CHAPTER_FIRST_LETTER = {
     "Alors Jesus fut mene par lesperit au desert",
   "T quand Jesus veit les tourbes ; il monta":
     "Et quand Jesus veit les tourbes ; il monta",
-"Ardez vous de faire aulmosne devant les": "Gardez vous de faire aulmosne devant les",
-"E jugez pas/affin que vous ne ſoyez iugez.":"E iugez pas/affin que vous ne ſoyez iugez.",
+  "Ardez vous de faire aulmosne devant les":
+    "Gardez vous de faire aulmosne devant les",
+  "E jugez pas/affin que vous ne ſoyez iugez.":
+    "E iugez pas/affin que vous ne ſoyez iugez.",
+  "T quand il fut descendu de la montaigne ;":
+    "Et quand il fut descendu de la montaigne ;",
+  "T entrant en la navire passa oultre ; et vint":
+    "Et entrant en la navire passa oultre ; et vint",
+  "T ayant appelle ses douze disciples leur":
+    "Et ayant appelle ses douze disciples leur",
   "T advint que quand Jesus eut mis fin de":
     "Et advint que quand Jesus eut mis fin de",
+  "N iceluy temps Jesus alloit par les bledz":
+    "En iceluy temps Jesus alloit par les bledz",
 };
 
 export const MISSPELLED_WORDS_DUE_TO_AI_OR_HUMAN_MISTAKE = {
@@ -815,6 +830,25 @@ export const MISSPELLED_WORDS_DUE_TO_AI_OR_HUMAN_MISTAKE = {
   neprent: "ne prent",
   "trou uera": "trouuera",
   "pro phete": "prophete",
+  "par tit": "partit",
+  "an noncez": "annoncez",
+  "ressusci tez": "ressuscitez",
+  veoirr: "veoir ?",
+  "es crit": "escrit",
+  "pre parera": "preparera",
+  "rece uoir": "recevoir",
+  "gene ration": "generation",
+  "beu uant": "beuvant",
+  Iermiers: "Fermiers",
+  perheurs: "pecheurs",
+  "esquel les": "esquelles",
+  "Beth : saida": "Beth-saida",
+  "So domites": "Sodomites",
+  QVpere: "O pere",
+  "reue lees": "revelees",
+  "en uers": "envers",
+  "re ueler": "reveler",
+  "ap prenez": "apprenez",
 };
 
 /* Texts */

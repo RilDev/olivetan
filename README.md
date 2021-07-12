@@ -11,4 +11,4 @@ La première Bible Française. Traduit en 1535 par frère Olivétan. Cette Bible
 - [ ] add `interfaces.ts` to scripts/ root
 - [ ] implement ADD_CHAPTER_FIRST_LETTER replacement algorithm
 - [ ] implement replacement algorithm to replace all errors in docs/notes-on-transcription.md
-- [ ] check what the "/" character is replaced with!
+- [x] check what the "/" character is replaced with!
