@@ -118,3 +118,11 @@ amendees | repenties?
 piecea | long ago?
 debonnaire | gentil?
 bledz | villages? --> https://www.cnrtl.fr/definition/BLEDS this is an anomaly, is it an Arab word, why is there no reference from the middle-ages ?
+licite | legal
+choit | choir, tomber?
+perdition | mettre a perdition? detruire?
+noysera | n'entendra? faire du buit?
+orra | entendra
+espart | disperser
+sciecle | sciecle? ere?
+oyseuse | oisive, sans attention?

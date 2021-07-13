@@ -95,10 +95,12 @@ export const MISSPELLED_WORDS_DUE_TO_CHARACTER_MODERNIZATION = {
   chanps: "champs",
   conment: "comment",
   lacconpareray: "laccompareray",
+  ronpra: "rompra",
 };
 
 export const WORDS_TO_MODERNIZE = {
   // i -> j
+  iettent: "jettent",
   ienuoye: "jenuoye",
   iournee: "journee",
   iette: "jette",
@@ -177,6 +179,11 @@ export const WORDS_TO_MODERNIZE = {
   ieusneront: "jeusneront",
   ioug: "joug",
   // u -> v
+  paruenu: "parvenu",
+  diuise: "divise",
+  diuisee: "divisee",
+  nauez: "navez",
+  Nauez: "Navez",
   trauaillez: "travaillez",
   rauissent: "ravissent",
   leuant: "levant",
@@ -358,7 +365,7 @@ export const WORDS_TO_MODERNIZE = {
   mauuais: "mauvais",
   mauuaise: "mauvaise",
   mauuaises: "mauvaises",
-  mauuaisessuspicions: "mauvaisessuspicions",
+  mauuaisessuspicions: "mauvaises suspicions",
   mauuaistie: "mauvaistie",
   mauuaisz: "mauvaisz",
   merueilles: "merveilles",
@@ -451,6 +458,7 @@ export const WORDS_TO_MODERNIZE = {
   reprouue: "reprouve",
   reprouuee: "reprouvee",
   reprouueray: "reprouveray",
+  scauiez: "scaviez",
   reprouuez: "reprouvez",
   retrouue: "retrouve",
   reuelee: "revelee",
@@ -534,6 +542,7 @@ export const WORDS_TO_MODERNIZE = {
   griefuement: "griefvement",
   sesmerueilla: "sesmerveilla",
   liurera: "livrera",
+  releuera: "relevera",
   // v -> u
   vmbres: "umbres",
   vne: "une",
@@ -623,6 +632,7 @@ export const MISSPELLED_WORDS_DUE_TO_AI_OR_HUMAN_MISTAKE = {
   "cho ses": "choses",
   "cho se": "chose",
   "com mande": "commande",
+  "com ment": "comment",
   "con me": "comme",
   "con uoiter": "convoiter",
   "cou uertz": "couvertz",
@@ -849,6 +859,23 @@ export const MISSPELLED_WORDS_DUE_TO_AI_OR_HUMAN_MISTAKE = {
   "en uers": "envers",
   "re ueler": "reveler",
   "ap prenez": "apprenez",
+  "man ger": "manger",
+  "sacrifica teurs": "sacrificateurs",
+  "miseri corde": "misericorde",
+  "fos se": "fosse",
+  "ac comply": "accomply",
+  "espe rit": "esperit",
+  "noyse ra": "noysera",
+  "Mais : les": "Mais les",
+  "Beel : zebub": "Beel-zebub",
+  "diui se": "diuise",
+  "Beel. zebub": "Beel-zebub",
+  "iu ges": "juges",
+  "vais seaux": "vaisseaux",
+  "mai son": "maison",
+  "rassem ble": "rassemble",
+  "pe che": "peche",
+  "blasphe me": "blaspheme",
 };
 
 /* Texts */
