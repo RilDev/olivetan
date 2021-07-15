@@ -100,6 +100,7 @@ export const MISSPELLED_WORDS_DUE_TO_CHARACTER_MODERNIZATION = {
 
 export const WORDS_TO_MODERNIZE = {
   // i -> j
+  Ionah: "Jonah",
   iettent: "jettent",
   ienuoye: "jenuoye",
   iournee: "journee",
@@ -179,6 +180,7 @@ export const WORDS_TO_MODERNIZE = {
   ieusneront: "jeusneront",
   ioug: "joug",
   // u -> v
+  Niniueh: "Niniveh",
   paruenu: "parvenu",
   diuise: "divise",
   diuisee: "divisee",
@@ -236,6 +238,7 @@ export const WORDS_TO_MODERNIZE = {
   beuuray: "beuvray",
   beuurez: "beuvrez",
   sesleueront: "sesleveront",
+  leueront: "leveront",
   cheueulx: "cheveulx",
   beuurons: "beuvrons",
   beuuroyent: "beuvroyent",
@@ -444,6 +447,7 @@ export const WORDS_TO_MODERNIZE = {
   prouuer: "prouver",
   rauir: "ravir",
   receuoir: "recevoir",
+  leuerent: "leverent",
   receura: "recevra",
   receuroient: "recevroient",
   receuront: "recevront",
@@ -543,6 +547,7 @@ export const WORDS_TO_MODERNIZE = {
   sesmerueilla: "sesmerveilla",
   liurera: "livrera",
   releuera: "relevera",
+  leuera: "levera",
   // v -> u
   vmbres: "umbres",
   vne: "une",
@@ -612,9 +617,13 @@ export const ADD_CHAPTER_FIRST_LETTER = {
     "Et advint que quand Jesus eut mis fin de",
   "N iceluy temps Jesus alloit par les bledz":
     "En iceluy temps Jesus alloit par les bledz",
+  "N cestuy jour ; Jesus estant party de la":
+    "En cestuy jour ; Jesus estant party de la",
 };
 
 export const MISSPELLED_WORDS_DUE_TO_AI_OR_HUMAN_MISTAKE = {
+  "au tres": "autres",
+  "che mine": "chemine",
   "Amen dez": "Amendez",
   "appa roisse": "apparoisse",
   "appel la": "appella",
@@ -739,6 +748,7 @@ export const MISSPELLED_WORDS_DUE_TO_AI_OR_HUMAN_MISTAKE = {
   "sim ple": "simple",
   maissi: "mais si",
   "mau uais": "mauvais",
+  "mau uaise": "mauvaise",
   "hay ra": "hayra",
   "tien dra": "tiendra",
   "ad iouster": "adjouster",
@@ -812,6 +822,7 @@ export const MISSPELLED_WORDS_DUE_TO_AI_OR_HUMAN_MISTAKE = {
   "mois son": "moisson",
   maisil: "mais il",
   "don na": "donna",
+  "don ne": "donne",
   Er: "Or",
   "ap pelle": "appelle",
   "Zebe dee": "Zebedee",
@@ -876,6 +887,16 @@ export const MISSPELLED_WORDS_DUE_TO_AI_OR_HUMAN_MISTAKE = {
   "rassem ble": "rassemble",
   "pe che": "peche",
   "blasphe me": "blaspheme",
+  "phari siens": "pharisiens",
+  "condem neront": "condemneront",
+  "Io nah": "Jonah",
+  "condem nera": "condemnera",
+  "sa pience": "sapience",
+  "par ler": "parler",
+  "fre res": "freres",
+  "tour bes": "tourbes",
+  "cheu rent": "cheurent",
+  "pier reux": "pierreux",
 };
 
 /* Texts */

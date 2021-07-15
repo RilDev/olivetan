@@ -126,3 +126,9 @@ orra | entendra
 espart | disperser
 sciecle | sciecle? ere?
 oyseuse | oisive, sans attention?
+royne | reine
+midy | sud
+sapience | sagesse
+yssu | sorti?
+querant | cherchant?
+balliee | cleaned?
