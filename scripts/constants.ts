@@ -296,7 +296,6 @@ export const WORDS_TO_MODERNIZE = {
   diuision: "division",
   diuulgoit: "divulgoit",
   diuulgue: "divulgue",
-  nauez: "navez",
   diuulguee: "divulguee",
   diuulguees: "divulguees",
   diuulguer: "divulguer",
